@@ -4,7 +4,7 @@ Hi, I’m **Mikołaj**! 👋
 
 Welcome to my **first weather application**. This project is a part of my programming journey, and I’m excited to share it with you.  
 
-Every day I will make updates and improvements, so **stay tuned**! I hope you enjoy exploring the app and following along as I learn and grow as a developer.  
+Regurlarly I  make something so **stay tuned**! I hope you enjoy exploring the app and following along as I learn and grow as a developer.  
 
 ---
 
@@ -19,15 +19,15 @@ Every day I will make updates and improvements, so **stay tuned**! I hope you en
 - Check the **current weather** for any city.
 - Displays **temperature, humidity, and weather conditions**.
 - User-friendly and responsive design.
-- Continuous updates and improvements.
 
 ---
 
 ## ⚙️ Technologies Used
 
-- HTML, CSS, JavaScript
-- [Optional: React / TypeScript / API used] — adjust based on your stack
-- Weather API for live data (e.g., OpenWeatherMap)
+- **React** (with functional components and hooks)
+- **JavaScript / JSX**
+- **CSS / Styled Components** (or your CSS method)
+- Weather API (e.g., OpenWeatherMap)
 
 ---
 
