@@ -6,10 +6,11 @@ export default function App() {
 
   return (
     <div className="app">
-      <div className="panel">
+      <div className="panel" aria-live="polite" aria-atomic="true">
         <Main city={city} setCity={setCity} />
         <WeatherCard city={city} />
       </div>
+      
     </div>
   );
 }
@@ -19,6 +20,7 @@ function Main({ city, setCity }) {
     <div className="main">
       <h1 className="title">Weather</h1>
       <p className="subtitle">Type a city to see current conditions.</p>
+      <label htmlFor="city-input" className="sr-only">City name</label>
       <input
         className="search"
         type="text"
@@ -98,7 +100,7 @@ function WeatherCard({ city }) {
   return (
     <section className="card" aria-label="Weather result">
       <div className="cardHeader">
-        <img className="weatherIcon" src={iconUrl} alt="weather" />
+        <img className="weatherIcon" src={iconUrl} alt={`Weather condition: ${getIcon(weather.current).replace('.svg','').replace(/-/g,' ')}`} />
         <div className="placeBlock">
           <div className="placeLabel">City</div>
           <div className="place">
@@ -107,23 +109,23 @@ function WeatherCard({ city }) {
         </div>
       </div>
 
-      <div className="metrics">
+      <dl className="metrics">
         <div className="metric">
           <img className="metricIcon" src={thermometerUrl} alt="temperature" />
-          <div className="metricLabel">Temperature</div>
-          <div className="metricValue">
+          <dt className="metricLabel">Temperature</dt>
+          <dd className="metricValue">
             {weather.current.temperature_2m}{weather.units.temperature_2m}
-          </div>
+          </dd>
         </div>
 
-        <div className="metric">
+        <dl className="metric">
           <img className="metricIcon" src={windUrl} alt="wind" />
-          <div className="metricLabel">Wind</div>
-          <div className="metricValue">
+          <dt className="metricLabel">Wind</dt>
+          <dd className="metricValue">
             {weather.current.wind_speed_10m}{weather.units.wind_speed_10m}
-          </div>
-        </div>
-      </div>
+          </dd>
+        </dl>
+      </dl>
     </section>
   );
 }
