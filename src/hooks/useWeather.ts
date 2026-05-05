@@ -11,7 +11,7 @@ export function useWeather(city: string) {
         return;
       }
       fetchWeather();
-    },500);
+    }, 500);
 
     async function fetchWeather() {
       try {
